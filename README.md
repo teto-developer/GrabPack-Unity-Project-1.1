@@ -11,3 +11,12 @@ How to Open:
 
 Please do not reupload or resell this project, you are welcome to use for your own projects/fan games
 
+
+## Structure-preserving export
+If you want to migrate/port this project while keeping the exact file structure and assets unchanged, you can generate a verified export package:
+
+```bash
+python3 Tools/preserve_structure_port.py ./PortedProject
+```
+
+This copies `Assets/`, `Packages/`, and `ProjectSettings/` into `./PortedProject` and creates `port-manifest.json` with SHA256 hashes for integrity verification.
